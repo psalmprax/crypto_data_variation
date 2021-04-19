@@ -1,0 +1,58 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:11
+        container_name: postgres
+        hostname: postgres
+        environment:
+        - POSTGRES_HOST=postgres
+        - POSTGRES_PORT=5432
+        - POSTGRES_USER=airflow
+        - POSTGRES_PASSWORD=airflow
+        - POSTGRES_DB=airflow
+        ports:
+          - "5432:5432"
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        links:
+          - postgres
+        depends_on:
+          - postgres
+        environment:
+          PGADMIN_DEFAULT_EMAIL: samuelolle@yahoo.com
+          PGADMIN_DEFAULT_PASSWORD: leicester
+        volumes:
+          - pgadmin:/root/.pgadmin
+        ports:
+          - "5050:80"
+        restart: unless-stopped
+
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        hostname: mysql
+        volumes:
+          - db_data:/var/lib/mysql
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: mysql
+          MYSQL_DATABASE: mysql
+          MYSQL_USER: mysql
+          MYSQL_PASSWORD: mysql
+        ports:
+          - "3306:3306"
+
+    airflow:
+        image: local-airflow:2.0.0
+        restart: always
+        depends_on:
+            - postgres
+            - mysql
+        volumes:
+            - ./dags:/usr/local/airflow/dags
+        ports:
+            - "8080:8080"
+volumes:
+  db_data: {}
+  pgadmin: {}
