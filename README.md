@@ -29,12 +29,12 @@ Then click the `+` button next to `Actions` to create a connection string detail
 Use below information to fill the connection details
 
 ### Connection Details
-`Conn Id`: `connections`
-`Conn Type`: `Postgres`
-`Host`: `postgres`
-`Schema`: `airflow`
-`Login`: `airflow`
-`Password`: `airflow`
-`Port`: `5432`
+- `Conn Id`: `connections`
+- `Conn Type`: `Postgres`
+- `Host`: `postgres`
+- `Schema`: `airflow`
+- `Login`: `airflow`
+- `Password`: `airflow`
+- `Port`: `5432`
 
 Execute the dag with a task id `Ingest`

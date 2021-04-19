@@ -1,4 +1,3 @@
-# import psycopg2
 import os
 from datetime import datetime
 from pathlib import Path
@@ -34,14 +33,8 @@ dag_params = {
 }
 
 
-def main(ds=None, **kwargs):
-    """
-    main function point of entry for execution
-    :param ds:
-    :type ds:
-    :param kwargs:
-    :type kwargs:
-    """
+def main():
+
     LOGGER = set_logger("main_logger")
 
     try:
