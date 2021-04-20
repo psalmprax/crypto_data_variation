@@ -52,4 +52,4 @@ Use below information to fill the connection details
 - `Password`: `airflow`
 - `Port`: `5432`
 
-Execute the dag with a task id `Ingest`
+Execute the dag with a dag id `Ingest`
