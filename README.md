@@ -42,7 +42,7 @@ Use below information to fill the connection details
 
 ### Connection Details on pgadmin
 - `Email/Username`: `samuelolle@yahoo.com`
-- `passwrod`: `leicester`
+- `password`: `leicester`
 
 
 ### Connection Details on Postgres
