@@ -93,6 +93,7 @@ class ApiCrypto:
             d_df['realized_variance_6min'] = pd.Series(six_min_df.loc[:, 'squared_log_return'], index=data.index)\
                 .resample('D', closed='left', label='left').sum().copy()
             d_df['realized_volatility_6min'] = np.sqrt(d_df['realized_variance_6min'])
+            d_df.reset_index(inplace=True)
             d_df.to_sql(tablename, engine, if_exists='replace', index=False)
 
         except Exception as e:

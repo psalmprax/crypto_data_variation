@@ -28,7 +28,7 @@ TBLNAME_VARIATION = config_reader(CONFIG_PATH, "api")["tablename_variation"]
 
 dag_params = {
     'dag_id': 'Ingest',
-    'start_date': datetime(2021, 4, 19),
+    'start_date': datetime(2021, 4, 20),
     'schedule_interval': None
 }
 
