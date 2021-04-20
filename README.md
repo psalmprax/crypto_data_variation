@@ -16,7 +16,9 @@ followed by
 
 after that, check if you can login to a local airflow instance by opening this url in your browser.
 
-http://localhost:8080/login/
+Airflow UI: http://localhost:8080/login/
+
+pgadmin UI: http://localhost:5050/
 
 The username is `admin` and the password is `admin`
 
