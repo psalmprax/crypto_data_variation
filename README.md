@@ -28,9 +28,21 @@ Then click the `+` button next to `Actions` to create a connection string detail
 
 Use below information to fill the connection details
 
-### Connection Details
-- `Conn Id`: `connections`
+### Connection Details on Aiflow UI - `Conn Id`: `connections`
 - `Conn Type`: `Postgres`
+- `Host`: `postgres`
+- `Schema`: `airflow`
+- `Login`: `airflow`
+- `Password`: `airflow`
+- `Port`: `5432`
+
+
+### Connection Details on pgadmin
+- `Email/Username`: `samuelolle@yahoo.com`
+- `passwrod`: `leicester`
+
+
+### Connection Details on Postgres
 - `Host`: `postgres`
 - `Schema`: `airflow`
 - `Login`: `airflow`
