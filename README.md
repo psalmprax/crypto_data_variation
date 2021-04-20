@@ -28,7 +28,8 @@ Then click the `+` button next to `Actions` to create a connection string detail
 
 Use below information to fill the connection details
 
-### Connection Details on Aiflow UI - `Conn Id`: `connections`
+### Connection Details on Aiflow UI 
+- `Conn Id`: `connections`
 - `Conn Type`: `Postgres`
 - `Host`: `postgres`
 - `Schema`: `airflow`
